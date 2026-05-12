@@ -1,0 +1,22 @@
+Day 1 of #100DaysOfData 🎯
+SQL is the first thing every hiring manager asks about in a data interview.
+And one of the most common questions?
+"What's the difference between WHERE and HAVING?"
+
+Here's the simplest way to remember it 👇
+WHERE → filters rows → runs before GROUP BY → doesn't work with aggregates 
+HAVING → filters groups → runs after GROUP BY → works with COUNT, SUM, AVG
+
+Example: Find departments with more than 10 active employees.
+
+WHERE removes inactive employees first. 
+HAVING then keeps only departments with 10+.
+
+Try using WHERE with COUNT() — your query breaks. That's the difference.
+
+One rule to remember: 
+→ Aggregation involved? Use HAVING. 
+→ Everything else? Use WHERE.
+
+If this was useful, follow along
+#100DaysOfData #SQL #DataAnalytics #DataScience
