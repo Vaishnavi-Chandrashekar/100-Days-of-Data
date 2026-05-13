@@ -1,0 +1,21 @@
+Day 2 of hashtag#100DaysOfData 🎯
+
+Early in my data journey, every query I wrote started with: SELECT *
+It felt harmless. It felt easy. It wasn't.
+
+Here's what SELECT * actually costs you 👇
+1. Performance hit It fetches every column even if you need 4. On millions of rows — more I/O, more memory, slower query.
+2. You pay for it (literally) In BigQuery, you're billed by data scanned. SELECT * on a large table = unnecessary cost. Every. Single. Time.
+3. Breaks your pipeline Someone renames or removes a column upstream. Your dashboard breaks. Your report crashes. And you're debugging it on a Monday morning.
+4. Indexes can't help you Databases use indexes to speed up queries. SELECT * bypasses them. You lose the performance boost entirely.
+5. Exposes data you shouldn't Sensitive columns — salaries, internal IDs — get fetched without you realising.
+6. Unreadable code Nobody knows what data you actually need. Makes collaboration and debugging a nightmare.
+
+The fix?
+Instead of: SELECT * FROM Customers;
+Write: SELECT Id, FirstName, Email, Joined FROM Customers
+
+Only pull what you need. Name what you use. Small habit. Massive difference at scale.
+→ Never use SELECT * in production. Ever.
+
+If this was useful follow along.
