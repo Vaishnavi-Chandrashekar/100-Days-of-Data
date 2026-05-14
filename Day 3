@@ -1,0 +1,33 @@
+Day 3 of hashtag#100DaysOfData 🎯
+If SQL joins confuse you, this example will fix that.
+
+Two SQL joins. One simple way to remember them.
+Imagine your school has 2 lists:
+📋 List A — all students
+📋 List B — students who submitted homework
+INNER JOIN → only students on BOTH lists (submitted homework ✅)
+LEFT JOIN → ALL students from List A. Didn't submit? You show up with a blank (NULL)
+
+Now same logic, real world 👇
+
+You have 100 customers.
+You check who logged into your app this month.
+Only 60 logged in.
+
+INNER JOIN → shows only the 60 who logged in. 
+The other 40 don't exist in the result ❌
+LEFT JOIN → shows all 100 customers. 60 logged in ✅ 40 show up with NULL 👀
+Just like the students who didn't submit —
+these 40 customers didn't show up either.
+
+That NULL is a churn risk signal 🚨
+"These 40 customers haven't logged in. They might cancel soon. One can flag them for the customer success team."
+
+Rule to remember:
+→ INNER JOIN — only rows that match in BOTH tables
+→ LEFT JOIN — ALL rows from the left table + NULL where there's no match
+
+In data, missing rows are often the most important ones.
+NULLs aren't empty data. They're answers.
+
+If this was useful follow along.
